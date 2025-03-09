@@ -8,6 +8,12 @@
     <meta name="keywords" content="software, engineering, demo, portfolio">
     <meta name="author" content="Sorn Maksumic">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        a {
+            color: #007aff !important;
+        }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
     <div class="text-center max-w-3xl mx-auto mt-10">
@@ -17,14 +23,32 @@
     <div class="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg my-10">
         Last update: 03/09/2025
         <h2 class="text-2xl font-bold mt-6 mb-3">Project: Snapstock</h2>
-        <p class="text-lg text-gray-700">Designed and built a dividend stock analysis platform for <a class="font-semibold" href="https://www.youtube.com/@rynewilliams">Ryne Williams</a> (financial content creator with 75K+ subscribers). It's fully a operational platform with real customer adoption ($197/annual subscription).</p>
-        <div class="mt-6">
-            <p class="text-center font-semibold">Speedrun demo:</p>
-            <div class="flex justify-center mt-2">
-                <iframe class="w-[560px] h-[315px]" src="https://www.youtube.com/embed/apCkWyfiRrU?si=CPUS56A6AAXURsBl" title="Snapstock Demo Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+        <p class="text-lg text-gray-700">Designed and built a dividend stock analysis platform for <a class="font-semibold" href="https://www.youtube.com/@rynewilliams">Ryne Williams</a> (financial content creator with 75K+ subscribers). It's a fully operational platform with real customer adoption ($197/annual subscription).</p>
+        <div class="flex justify-center mt-10">
+            <a class="text-xl font-bold" href="https://www.youtube.com/embed/apCkWyfiRrU" target="_blank">&#x21F1; YouTube Video</a>
         </div>
-        <div class="mt-6">
+        <div class="swiper my-6">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/snapstock_screenshot1.png" alt="Snapstock Screenshot 1" class="rounded-lg shadow-lg"></div>
+                <div class="swiper-slide"><img src="images/snapstock_screenshot2.png" alt="Snapstock Screenshot 2" class="rounded-lg shadow-lg"></div>
+                <div class="swiper-slide"><img src="images/snapstock_screenshot3.png" alt="Snapstock Screenshot 3" class="rounded-lg shadow-lg"></div>
+                <div class="swiper-slide"><img src="images/snapstock_screenshot4.png" alt="Snapstock Screenshot 4" class="rounded-lg shadow-lg"></div>
+                <div class="swiper-slide"><img src="images/snapstock_screenshot5.png" alt="Snapstock Screenshot 5" class="rounded-lg shadow-lg"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                pagination: { el: '.swiper-pagination', clickable: true },
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                autoplay: { delay: 5000, disableOnInteraction: false },
+            });
+        </script>
+        <div class="mt-10">
             <p class="font-semibold">Features:</p>
             <ul class="list-disc list-inside text-gray-700 mt-2">
                 <li>Company search by ticker</li>
@@ -35,7 +59,7 @@
                 <li>About company and news</li>
             </ul>
         </div>
-        <div class="mt-6">
+        <div class="mt-10">
             <p class="font-semibold">Planned features:</p>
             <ul class="list-disc list-inside text-gray-700 mt-2">
                 <li>Snapscore: proprietary scoring system designed to evaluate businesses</li>
@@ -43,7 +67,7 @@
                 <li>Affiliate: enable affiliates to earn commissions by referring users</li>
             </ul>
         </div>
-        <div class="mt-6">
+        <div class="mt-10">
             <p class="font-semibold">Tech stack:</p>
             <ul class="list-disc list-inside text-gray-700 mt-2">
                 <li>Frontend: Vite, Vue, Tailwind, Shadcn</li>
@@ -61,7 +85,7 @@
                 <li>Hosting: dedicated server</li>
             </ul>
         </div>
-        <div class="mt-6">
+        <div class="mt-10">
             <p><a class="font-semibold" href="https://www.retirewithryne.com/the-investment-club">Go to landing page</a></p>
         </div>
     </div>
